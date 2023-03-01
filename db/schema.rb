@@ -27,13 +27,11 @@ ActiveRecord::Schema.define(version: 2023_03_01_153154) do
   end
 
   create_table "signups", force: :cascade do |t|
-    t.integer "camper_id", null: false
-    t.integer "activity_id", null: false
+    t.integer "camper_id"
+    t.integer "activity_id"
     t.integer "time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "signups", "activities"
-  add_foreign_key "signups", "campers"
 end
